@@ -1,0 +1,32 @@
+package ch1;
+import java.util.*;
+import java.util.List;
+import java.util.Random;
+
+public class hw1{
+ public static void main(String args[]) {
+  Random rd = new Random();
+  int a = 1;
+  var ts1=new TreeSet<>();
+  var ts2=new TreeSet<>();
+  
+  //TreeSet ts = new TreeSet();
+  //TreeSet tshoho = new TreeSet();
+  while(ts1.size()<10){
+   int n = rd.nextInt(100) + 1;
+   if(!ts1.contains(n)) {
+    ts1.add(n);
+    if(n<71 && n>29) {
+     ts2.add(n);
+    }
+    System.out.println("第"+a+"個號碼："+n);
+    a += 1;
+   }
+  }
+  System.out.println("物件內元素個數為：" + ts1.size());
+  System.out.println("物件內元素內容為：" + ts1);
+  System.out.println("第一個元素內容為：" + ts1.first());
+  System.out.println("第一個元素內容為：" + ts1.last());
+  System.out.println("內容介於30～70者：" + ts2);
+ }
+}
